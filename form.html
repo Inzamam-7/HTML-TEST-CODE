@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        *{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+        <legend>Basic Information</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="8" maxlength="10" required><br><br>
+        <label for="number">Number:</label>
+        <input type="number" id="number" name="number" required><br><br>
+        <label for="color" > Department</label>
+        <input type="radio" id="color" name="color" value="red">ME
+        <input type="radio" id="color" name="color" value="green">EEE
+        <input type="radio" id="color" name="color" value="blue">CSE<br><br>
+        <label for ="checkbox" >Select your choice:</label>
+        <input type="checkbox" id="checkbox" name="checkbox" value="1">HTML
+        <input type="checkbox" id="checkbox" name="checkbox" value="2">CSS
+        <input type="checkbox" id="checkbox" name="checkbox" value="3">JavaScript<br><br>
+        <input type="file" id="file" name="img1.jpeg"><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="button" value="Click me"> <!--it cant submit form-->
+        <button type="submit" id="button">Submit</button>
+        </fieldset>
+
+        <select>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+        </select>
+
+        <label for="cars">Choose one or more cars:</label>
+        <select id="cars" name="cars" multiple>
+        <option value="BMW">BMW</option>
+        <option value="Mercedes">Mercedes</option>
+        <option value="Audi">Audi</option>
+        <option value="Tesla">Tesla</option>
+        </select>
+
+        <label for="comments">Comments</label>
+        <textarea name="comments" id="comments" cols="30" rows="10"></textarea><br><br>
+    
+
+    <!-- Basic Attributes -->
+    <label for="text">Text Input:</label>
+    <input type="text" id="text" name="text" value="John Doe" placeholder="Enter your name" required><br><br>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" minlength="8" maxlength="16" required><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" autocomplete="on" required><br><br>
+    
+    <label for="number">Number:</label>
+    <input type="number" id="number" name="number" min="1" max="100" step="5" required><br><br>
+    
+    <label for="url">URL:</label>
+    <input type="url" id="url" name="url" required><br><br>
+    
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required><br><br>
+    
+    <label for="time">Time:</label>
+    <input type="time" id="time" name="time" required><br><br>
+    
+    <label for="color">Color Picker:</label>
+    <input type="color" id="color" name="color"><br><br>
+    
+    <label for="file">File Upload:</label>
+    <input type="file" id="file" name="file" accept="image/png, image/jpeg" multiple><br><br>
+    
+    <label for="tel">Phone Number:</label>
+    <input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required><br><br>
+    
+    <!-- Selection Inputs -->
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male" checked>
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br><br>
+    
+    <label for="subscribe">Subscribe:</label>
+    <input type="checkbox" id="subscribe" name="subscribe" checked><br><br>
+    
+    <!-- List with datalist -->
+    <label for="browser">Choose your browser:</label>
+    <input type="text" id="browser" name="browser" list="browsers">
+    <datalist id="browsers">
+        <option value="Chrome">
+        <option value="Firefox">
+        <option value="Safari">
+        <option value="Edge">
+    </datalist><br><br>
+    
+    <!-- Hidden Input -->
+    <input type="hidden" name="userID" value="12345">
+    
+    <!-- Range Slider -->
+    <label for="range">Volume:</label>
+    <input type="range" id="range" name="range" min="0" max="100" step="10"><br><br>
+    
+    <!-- Button Inputs -->
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+    <input type="button" value="Click Me" onclick="alert('Button Clicked!')">
+    </form>
+    <script>
+        document.getElementById("button").addEventListener("dblclick", function(){
+            alert("form submitted");
+        });
+    </script>
+</body>
+</html>
